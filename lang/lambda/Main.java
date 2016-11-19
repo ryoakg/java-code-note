@@ -59,10 +59,22 @@ public class Main{
 
     }
 
+    public static void share_var(){
+        separator();
+
+        String[] var = {"a"};
+        Runnable r1 = () -> { System.out.println(var[0]); };
+        Runnable r2 = () -> { var[0] = "b"; };
+        r1.run();
+        r2.run();
+        r1.run();
+    }
+
     public static void main(String... args){
         define_lambda_type();
         substitution();
         scope1();
         scope2();
+        share_var();
     }
 }
