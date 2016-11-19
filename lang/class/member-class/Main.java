@@ -8,6 +8,8 @@
 //   フィールドとメソッドを使っては操作できる
 // - 名前がなくて見えないけど、Outer に対する this みたいなフィールドがあると考えればいいかも
 // - staticの有無に関らず、コンパイル結果は Outer$Inner.class になる
+// - 動作的には Inner のコンストラクタに、こっそり Outer のインスタンスが渡る様になっているみたい
+//   参照: http://d.hatena.ne.jp/daisuke-m/20110527/1306492097
 
 class Outer {
     int f;
